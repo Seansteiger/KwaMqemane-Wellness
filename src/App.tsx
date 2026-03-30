@@ -60,7 +60,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen flex flex-col bg-surface overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">
