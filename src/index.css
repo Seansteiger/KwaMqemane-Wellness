@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-surface: #161311;
+  --color-on-background: #eae1dd;
+  --color-on-surface: #eae1dd;
+  --color-on-surface-variant: #d2c1d3;
+  
+  --color-primary: #ebb2ff;
+  --color-primary-container: #7b1fa2;
+  --color-on-primary: #520071;
+  
+  --color-secondary: #82db7e;
+  --color-secondary-container: #006619;
+  --color-on-secondary: #00390a;
+  
+  --color-tertiary: #e9c349;
+  --color-tertiary-container: #cca730;
+  --color-on-tertiary: #3c2f00;
+
+  --color-surface-container: #231f1d;
+  --color-surface-container-low: #1f1b19;
+  --color-surface-container-high: #2e2927;
+  --color-surface-container-highest: #393431;
+  --color-surface-bright: #3d3836;
+  --color-surface-dim: #161311;
+  
+  --color-outline: #9b8c9c;
+  --color-outline-variant: #4e4351;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+
+  body {
+    @apply bg-surface text-on-background font-body selection:bg-primary-container selection:text-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10;
+  }
+  
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
